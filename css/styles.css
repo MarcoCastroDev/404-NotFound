@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;700&family=Space+Mono:wght@400;700&display=swap');
+
+:root{
+  --gray: #BDBDBD;
+  --veryGray: #333333;
+  --white: #ffff;
+  --grayLight: ##4F4F4F;
+  --ff-inconsolata: 'Inconsolata', monospace;
+  --ff-space-mono: 'Space Mono', monospace;
+  --red: #FF6D5B;
+  --yellow: #FFD25B;
+  --purple: #60588E;
+}
+
+body{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--ff-space-mono);
+  position: relative;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.header.text{
+  width: 90%;
+  margin: 1rem auto;
+  font-weight: 700;
+  letter-spacing: -0.1rem;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-family: var(--ff-inconsolata);
+  max-width: 1400px;
+}
+
+.main.container{
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.img{
+  width: 100%;
+}
+
+.scarecrow-img{
+  width: 100%;
+  max-width: 450px;
+}
+
+.info.title{
+  font-size: 2.6em;
+  max-width: 400px;
+}
+
+.info.paragraph{
+  color: var(--veryGray);
+  padding-right: 0.4rem;
+  line-height: 1.6;
+  margin: 1.5rem 0 2.5rem 0;
+  max-width: 300px;
+}
+
+.btn{
+  padding: 1.2rem 2.2rem;
+  background-color: var(--veryGray);
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: -0.035em;
+  font-size: 0.75em;
+  border: none;
+  transition: 0.6s ease-in-out;
+  border: 1px solid transparent;
+  font-weight: 700;
+}
+
+.btn:hover{
+  background-color: var(--purple);
+  cursor: pointer;
+  border-radius: 0.3rem;
+}
+
+.footer{
+  box-sizing: border-box;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+.copy{
+  color: var(--gray);
+}
+
+a{
+  color: var(--gray);
+  transition: 0.6s ease-in-out;
+}
+
+a:hover{
+  color: var(--red);
+}
+
+a:visited{
+  color: var(--yellow);
+}
+
+@media (min-width:768px) {
+  .header.text{
+    padding-top: 1.5rem;
+  }
+
+  .main.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+    align-items: center;
+    gap: 3em;
+  }
+
+  .info.paragraph{
+    color: var(--veryGray);
+    padding-right: 0.4rem;
+    line-height: 1.6;
+    margin: 2rem 0 2.5rem 0;
+    max-width: 300px;
+  }
+}
